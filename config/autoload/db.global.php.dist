@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Database configuration settings
+ */
+
+return [
+    'db' => [
+        'user' => '',
+        'password' => '',
+        'dbname' => '',
+        'driver' => 'pdo_mysql',
+    ],
+    'db.entities' => [
+        'User/Entity'
+    ]
+];

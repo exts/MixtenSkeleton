@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Default twig options
+ */
+
+return [
+    'twig.options' => [
+        'debug' => true,
+        'cache' => false,
+    ],
+    'twig.dirs' => [
+        root('resources/templates'),
+    ],
+];
