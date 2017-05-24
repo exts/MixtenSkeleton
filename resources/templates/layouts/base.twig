@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{% block template_lang %}en{% endblock %}">
+<head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}Blank Title{% endblock %}</title>
+    {% block metatags %}
+    <meta name="description" content="Example Template">
+    <meta name="author" content="Example Author">
+    {% endblock %}
+
+    {% block css %}
+    {#<link rel="stylesheet" href="css/styles.css?v=1.0">#}
+    {% endblock %}
+
+    {% block js %}
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    {% endblock %}
+</head>
+
+<body>
+{% block content %}Blank Content{% endblock %}
+</body>
+</html>

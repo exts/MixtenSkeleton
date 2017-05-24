@@ -1,0 +1,16 @@
+<?php
+
+use Zend\ConfigAggregator\ConfigAggregator;
+
+/**
+ * Default Config Settings file
+ */
+
+return [
+
+    // debug mode enabled by default
+    'debug' => true,
+
+    // by default config caching is disabled
+    ConfigAggregator::ENABLE_CACHE => false,
+];
