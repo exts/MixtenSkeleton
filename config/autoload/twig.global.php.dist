@@ -9,7 +9,9 @@ return [
         'debug' => true,
         'cache' => false,
     ],
+    'translator.messages' => [],
     'twig.dirs' => [
-        root('resources/templates'),
+        'root' => root('resources/templates'),
+        'user' => root('src/User/Templates'),
     ],
 ];

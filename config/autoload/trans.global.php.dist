@@ -1,0 +1,10 @@
+<?php
+
+return [
+    'trans' => [
+        [
+            'dir' => root('src/User/Translations/messages.en.yml'),
+            'lc_cc' => 'en_US'
+        ]
+    ]
+];

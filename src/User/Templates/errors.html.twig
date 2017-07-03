@@ -1,0 +1,7 @@
+{% if error and error is not empty %}
+    <ul>
+        <li>{{ error }}</li>
+    </ul>
+{% else %}
+    {{ form_errors(form) }}
+{% endif %}

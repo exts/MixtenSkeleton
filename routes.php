@@ -1,5 +1,6 @@
 <?php
 
-use App\User\Actions\RegisterAction;
+use App\User\Controllers\RegisterController;
+use function Mixten\cc;
 
-//$app->any('/register', _a(RegisterAction::class), 'register');
+$app->any('/register', cc(RegisterController::class, 'register'));

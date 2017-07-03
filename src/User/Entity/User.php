@@ -3,7 +3,7 @@ namespace App\User\Entity;
 
 /**
  * Class UserEntity
- * @Entity(repositoryClass="UserRepository") @Table(name="users")
+ * @Entity(repositoryClass="App\User\Repository\UserRepository") @Table(name="users")
  * @package TMI\User\Entity
  */
 class User
@@ -83,7 +83,7 @@ class User
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
     }
 
     /**

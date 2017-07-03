@@ -18,6 +18,18 @@ $config = include __DIR__ . '/config/config.php';
 $container = new Canister($config);
 
 /**
+ * Forms
+ */
+
+include_once __DIR__ . '/forms.php';
+
+/**
+ * Setup Translator
+ */
+
+include_once __DIR__ . '/translations.php';
+
+/**
  * Setup Twig
  */
 
