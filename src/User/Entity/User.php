@@ -83,6 +83,14 @@ class User
      */
     public function setPassword($password)
     {
+        $this->password = $password;
+    }
+
+    /**
+     * @param $password
+     */
+    public function hashPassword($password)
+    {
         $this->password = password_hash($password, PASSWORD_DEFAULT);
     }
 
