@@ -1,8 +1,6 @@
 <?php
 
 use Psr\Container\ContainerInterface;
-use App\Core\Renderer\TwigRenderer;
-use App\Core\Renderer\TwigRenderInterface;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Symfony\Bridge\Twig\Form\TwigRenderer as FormTwigRenderer;
 use Symfony\Bridge\Twig\Extension\FormExtension;

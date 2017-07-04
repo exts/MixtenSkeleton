@@ -2,10 +2,10 @@
 namespace App\User\Controllers;
 
 use App\Core\Exceptions\FormException;
-use App\Core\Renderer\TwigRenderer;
 use App\User\Entity\User;
 use App\User\Form\RegisterType;
 use App\User\Services\RegisterService;
+use Mixten\Renderer\Twig\TwigRenderer;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\Form\FormFactory;
 use Zend\Diactoros\Response;
