@@ -7,7 +7,6 @@ use Symfony\Bridge\Twig\Extension\TranslationExtension;
 use Symfony\Bridge\Twig\Form\TwigRenderer as FormTwigRenderer;
 use Symfony\Bridge\Twig\Extension\FormExtension;
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Csrf\CsrfTokenManager;
 use Symfony\Component\Translation\Translator;
 
@@ -53,6 +52,3 @@ $container->share(Twig_Environment::class, function(ContainerInterface $c) {
 
     return $twig;
 });
-
-//create alias
-$container->alias(TwigRenderInterface::class, TwigRenderer::class);

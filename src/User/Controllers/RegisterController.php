@@ -11,8 +11,20 @@ use Symfony\Component\Form\FormFactory;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\Response\RedirectResponse;
 
+/**
+ * Class RegisterController
+ *
+ * @package App\User\Controllers
+ */
 class RegisterController
 {
+    /**
+     * RegisterController constructor.
+     *
+     * @param FormFactory $form_factory
+     * @param TwigRenderer $render
+     * @param RegisterService $register_service
+     */
     public function __construct(
         FormFactory $form_factory,
         TwigRenderer $render,
@@ -23,6 +35,11 @@ class RegisterController
         $this->register_service = $register_service;
     }
 
+    /**
+     * @param ServerRequestInterface $request
+     *
+     * @return Response|RedirectResponse
+     */
     public function register(ServerRequestInterface $request)
     {
         $user = new User();

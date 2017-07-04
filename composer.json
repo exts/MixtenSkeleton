@@ -1,7 +1,7 @@
 {
   "require": {
     "twig/twig": "^2.0",
-    "exts/mixten": "^0.2",
+    "exts/mixten": "^0.3",
     "symfony/yaml": "^3.0",
     "symfony/form": "^3.0",
     "doctrine/orm": "^v2.5.6",

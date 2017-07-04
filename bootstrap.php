@@ -2,6 +2,8 @@
 
 use Canister\Canister;
 use Mixten\Application;
+use Mixten\Renderer\Twig\TwigRenderer;
+use Mixten\Renderer\Twig\TwigRendererInterface;
 
 require_once "vendor/autoload.php";
 
@@ -45,7 +47,14 @@ include_once __DIR__ . '/database.php';
  * Setup Application
  */
 
-$app = new Application($container);
+$app = new Application($container, true);
+
+/**
+ * Setup Bootstrap aliases
+ */
+$app->bootstrap([
+    TwigRendererInterface::class => TwigRenderer::class
+]);
 
 /**
  * Handle Routes
