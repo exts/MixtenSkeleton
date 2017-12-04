@@ -2,7 +2,7 @@
 
 use Psr\Container\ContainerInterface;
 use Symfony\Bridge\Twig\Extension\TranslationExtension;
-use Symfony\Bridge\Twig\Form\TwigRenderer as FormTwigRenderer;
+use Symfony\Component\Form\FormRenderer;
 use Symfony\Bridge\Twig\Extension\FormExtension;
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
 use Symfony\Component\Security\Csrf\CsrfTokenManager;
@@ -40,8 +40,8 @@ $container->share(Twig_Environment::class, function(ContainerInterface $c) {
 
     $csrf_token_manager = $c->get(CsrfTokenManager::class);
     $twig->addRuntimeLoader(new Twig_FactoryRuntimeLoader([
-        FormTwigRenderer::class => function() use($form_engine, $csrf_token_manager) {
-            return new \Symfony\Bridge\Twig\Form\TwigRenderer($form_engine, $csrf_token_manager);
+        FormRenderer::class => function() use($form_engine, $csrf_token_manager) {
+            return new FormRenderer($form_engine, $csrf_token_manager);
         },
     ]));
 
